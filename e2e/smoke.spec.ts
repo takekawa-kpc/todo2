@@ -4,5 +4,5 @@ import { test, expect } from '@playwright/test'
 test('ページが /todo2/ で読み込まれる', async ({ page }) => {
   await page.goto('/')
   await expect(page).toHaveTitle('ToDo')
-  await expect(page.getByRole('heading', { name: 'ToDo' })).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'ToDo', exact: true })).toBeVisible()
 })
